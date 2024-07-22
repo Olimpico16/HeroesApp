@@ -1,0 +1,76 @@
+<ng-template #divLoading>
+  <mat-grid-list cols="1">
+    <mat-grid-tile>
+      <mat-spinner color="accent"></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-template>
+
+<div class="container" *ngIf="hero; else divLoading">
+  <mat-card class="card">
+    <mat-card-header class="div_container">
+      <div class="avatar-container" mat-card-avatar>
+        <img
+          [ngClass]="{
+            'logo-dc': hero.publisher === 'DC Comics',
+            'logo-marvel': hero.publisher === 'Marvel Comics'
+          }"
+          [src]="hero | heroIcon"
+          [alt]="hero.superhero"
+        />
+      </div>
+      <div class="title-container">
+        <mat-card-title class="card-title">{{ hero.superhero }}</mat-card-title>
+        <mat-card-subtitle>{{ hero.alter_ego }}</mat-card-subtitle>
+      </div>
+    </mat-card-header>
+    <hr />
+    <div class="flex-container">
+      <img
+        mat-card-image
+        class="card-image"
+        [src]="hero | heroImage"
+        [alt]="hero.superhero"
+      />
+      <mat-card-content>
+        <ul>
+          <li>
+            <h3 class="text-title">Nombre Real</h3>
+            <p class="text-info">{{ hero.characters }}</p>
+          </li>
+          <hr />
+          <li>
+            <h3 class="text-title">Lugar de nacimiento</h3>
+            <p class="text-info">{{ hero.place_of_birth }}</p>
+          </li>
+          <hr />
+          <li>
+            <h3 class="text-title">Base de operaciones</h3>
+            <p class="text-info">{{ hero.base_of_operation }}</p>
+          </li>
+          <hr />
+          <li>
+            <h3 class="text-title">Ocupacion</h3>
+            <p class="text-info">{{ hero.occupation }}</p>
+          </li>
+          <hr />
+          <li>
+            <h3 class="text-title">Primera Aparición</h3>
+            <p class="text-info">{{ hero.first_appearance }}</p>
+          </li>
+          <hr />
+          <li>
+            <h3 class="text-title">Publicado Por</h3>
+            <p class="text-info">{{ hero.publisher }}</p>
+          </li>
+          <hr />
+        </ul>
+      </mat-card-content>
+    </div>
+    <mat-card-actions>
+      <button mat-button class="btn-underline" (click)="goBack()">
+        Regresar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

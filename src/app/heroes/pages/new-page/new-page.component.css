@@ -1,0 +1,26 @@
+.alt_img{
+  width: 45%;
+}
+
+.color-bgc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.div-flex{
+  display: flex;
+}
+
+.div-flex button{
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  margin: 0.125rem 1.25rem 0rem 0.625rem;
+  cursor: pointer;
+  padding: 3px;
+  height: min-content;
+}

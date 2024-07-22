@@ -1,0 +1,119 @@
+hr {
+  margin-top: 15px;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+}
+
+button {
+  margin: auto 50%;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+}
+
+.text-info {
+  font-size: 1.1rem;
+  font-style: oblique;
+}
+
+.text-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-container {
+  display: flex;
+  margin-right: 6.25rem;
+}
+
+.logo-dc {
+  width: 110px;
+  height: 70px;
+  margin-top: -0.4375rem;
+  filter: drop-shadow(3px -1px 6px #2a48b3);
+  animation: logo-dc infinite alternate 2s;
+}
+
+.logo-marvel {
+  width: 200px;
+  height: 150px;
+  margin: -2.8125rem -3.245rem;
+  filter: drop-shadow(3px -1px 6px #f40404);
+  animation: logo-marvel infinite alternate 2s;
+}
+
+.card-title {
+  font-size: 1.5em;
+}
+
+.card-image {
+  max-width: 50%;
+  border-radius: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 5px 0 0 15px;
+  padding: 15px;
+}
+
+.btn-underline{
+  padding: 0.90rem;
+  margin: 10px;
+}
+
+.btn-underline::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 3px;
+  width: 0px;
+  border-radius: 2px;
+  background-color: #ffff;
+  transition: 0.4s ease;
+}
+
+.btn-underline:hover::after{
+  width: 100%;
+}
+
+@keyframes logo-dc {
+  0% {
+    filter: drop-shadow(3px -1px 6px #000000);
+    transform: scale(1);
+  }
+  100% {
+    filter: drop-shadow(3px -1px 6px #103cd8);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes logo-marvel {
+  0% {
+    filter: drop-shadow(3px -1px 6px #323131);
+    transform: scale(1);
+  }
+  100% {
+    filter: drop-shadow(3px -1px 6px #f40404);
+    transform: scale(1.05);
+  }
+}

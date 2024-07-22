@@ -1,0 +1,14 @@
+.color-text {
+  color: white;
+}
+
+.container-register {
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  box-shadow: 0px 0px 21px -10px #ffff;
+  background-color: #161616;
+  width: 750px;
+}

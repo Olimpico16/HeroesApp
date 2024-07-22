@@ -1,0 +1,71 @@
+/* .add-character{
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0 0.9375rem 0.9375rem 0;
+  padding: 10px;
+  border-radius: 100%;
+  width: min-content;
+  height: min-content;
+  background-color: #141414;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+} */
+
+.add-character{
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0 0.9375rem 0.9375rem 0;
+  padding: 10px;
+  border-radius:100% ;
+  width: min-content;
+  height: min-content;
+  background-color: #141414;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  --color: #141414;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.add-character::before {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 150px;
+  height: 200px;
+  z-index: -1;
+  border-radius: 100%;
+}
+
+.add-character:hover {
+  color: #141414;
+}
+
+.add-character:before {
+  top: 100%;
+  left: 100%;
+  transition: 0.3s all;
+}
+
+.add-character:hover::before {
+  top: -30px;
+  left: -30px;
+}
+
+
+/* .add-character:hover{
+  background-color: #fff;
+  color: #141414;
+  transition: 0.4s ease;
+} */
+
+
+.add-character mat-icon{
+  font-size: 25px;
+}

@@ -1,0 +1,16 @@
+<h1> Listado de Héroes </h1>
+<mat-divider></mat-divider>
+
+<div class="grid mb-8 pt-2 container">
+
+  <div class="col-12 sm:col-4 md:col-3 xl:col-2" *ngFor="let hero of heroes">
+    <heroes-hero-card [hero]="hero"></heroes-hero-card>
+  </div>
+
+  <button class="add-character" matTooltip="Agregar Heroe" [matTooltipDisabled]="isTooltipDisabled" (mouseenter)="enableTooltip()"
+  (mouseleave)="disableTooltip()" (click)="goAdd()" [matTooltipPosition]="position.value!">
+    <mat-icon>add</mat-icon>
+  </button>
+
+
+</div>
